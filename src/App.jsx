@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Dialog } from "./components/dialog"
+import { Dialog } from "./lib/dialog"
 import "./App.css"
 
 const dialogInformations = {
@@ -15,7 +15,7 @@ function App() {
         <>
             <button 
                 onClick={toggleDialog}
-                className={!isDialogOpen ? 'btn__dialog' : 'btn__dialog btn__dialog--hidden'}
+                className="btn__dialog"
             >Dialog</button>
 
             <Dialog 

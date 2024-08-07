@@ -1,8 +1,8 @@
-# React + Vite
+# react dialog component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+test
 
-Currently, two official plugins are available:
+repo :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@rum7/react-dialog](https://github.com/rum7/BrahimCharraq_14_31072024_reactDialog/tree/main/README.md)
+- [@rum7](https://github.com/rum7)
