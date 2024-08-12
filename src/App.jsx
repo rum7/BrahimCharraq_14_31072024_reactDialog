@@ -2,28 +2,26 @@ import { useState } from "react"
 import { Dialog } from "./lib/dialog"
 import "./App.css"
 
-const dialogInformations = {
-    title: "The <dialog> tag",
-    text: "The <dialog> element makes it easy to create popup dialogs and modals on a web page."
-}
 
-function App() {
+const App = () => {
     const [isDialogOpen, setisDialogOpen] = useState(false)
     const toggleDialog = () => setisDialogOpen(!isDialogOpen)
 
+    const valueDialogSettings = {
+        isDialogOpen: isDialogOpen,
+        onClose: toggleDialog,
+        dialogTitle: "The <Dialog /> component",
+        dialogText: "The <Dialog /> component makes it easy to create popup dialogs and modals in your react.JS application.",
+        btnCloseType: "iconBtn",
+        btnCloseLabel: "Close",
+        customClass: "dialog-custom"
+    }
+
     return (
         <>
-            <button 
-                onClick={toggleDialog}
-                className="btn__dialog"
-            >Dialog</button>
+            <button onClick={toggleDialog}>Click me</button>
 
-            <Dialog 
-                isDialogOpen={isDialogOpen} 
-                dialogTitle={dialogInformations.title}
-                dialogText={dialogInformations.text} 
-                onClose={toggleDialog}
-            />
+            <Dialog value={valueDialogSettings} />
         </>
     )
 }

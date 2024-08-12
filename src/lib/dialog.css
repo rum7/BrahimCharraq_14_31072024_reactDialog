@@ -1,32 +1,91 @@
+.dialog__container {
+    display: none;
+    content: '';
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    opacity: 0;
+    background-color: #0006;
+    
+    transition: all .2s allow-discrete;
+}
+.dialog__container[open] {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
 dialog {
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 1.5rem;
     inset: 0;
     position: absolute;
-    border: 3px #646cff solid;
-    border-radius: 1rem;
+    z-index: 2;
+    width: 90vw;
+    max-width: 450px;
+    max-height: 85vh;
+    border: none;
+    border-radius: .5rem;
+    box-shadow:
+        0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0px 12.5px 10px rgba(0, 0, 0, 0.035),
+        0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        0px 100px 80px rgba(0, 0, 0, 0.07)
+    ;
   
     opacity: 0;
     transform: scale(.95);
+    transform: translateY(1vh);
     transition: all 0.2s allow-discrete;
 }
 dialog[open] {
     display: flex;
     opacity: 1;
     transform: scale(1);
+    transform: translateY(0);
 
     @starting-style {
         opacity: 0;
         transform: scale(.95);
+        transform: translateY(-1vh);
     }
 }
 
-
 dialog h3 {
     margin: 0;
+    align-self: flex-start;
     color: #646cff;
+}
+
+dialog p {
+    margin: 0;
+    text-align: left;
+}
+
+dialog button {
+    align-self: end;
+    margin-top: 1rem;
+}
+dialog .btn-close__icon {
+    display: flex;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    margin: 0;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+dialog .btn-close__icon svg {
+    color: #acacac;
+    height: 1.25rem;
+    width: 1.25rem;
 }

@@ -1,7 +1,7 @@
 {
     "name": "@rum7/react-dialog",
     "description": "Dialog component for react",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "type": "module",
     "files": [
         "dist"
@@ -23,7 +23,8 @@
         "eslint-plugin-react": "^7.34.3",
         "eslint-plugin-react-hooks": "^4.6.2",
         "eslint-plugin-react-refresh": "^0.4.7",
-        "vite": "^5.3.4"
+        "vite": "^5.3.4",
+        "vite-plugin-lib-inject-css": "^2.1.1"
     },
     "publishConfig": {
         "access": "public"
@@ -31,9 +32,9 @@
     "main": "./dist/react-dialog.umd.js",
     "module": "./dist/react-library-scaffold.es.js",
     "exports": {
-      ".": {
-        "import": "./dist/react-dialog.es.js",
-        "require": "./dist/react-dialog.umd.js"
-      }
+        ".": {
+            "import": "./dist/react-dialog.es.js",
+            "require": "./dist/react-dialog.umd.js"
+        }
     }
 }
