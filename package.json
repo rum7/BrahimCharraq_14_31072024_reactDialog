@@ -1,7 +1,7 @@
 {
     "name": "@rum7/react-dialog",
     "description": "Dialog component for react",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "type": "module",
     "files": [
         "dist"
