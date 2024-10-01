@@ -14,7 +14,7 @@
 ### 1. Import
 ```javascript
 import { useState } from "react"
-import { Dialog } from "./lib/dialog"
+import { Dialog } from "@rum7/react-dialog"
 ```
 
 ### 2. Modal state configuration
